@@ -18,7 +18,7 @@ GEM
       bigdecimal
       rexml
     date (3.4.1)
-    debug (1.10.0)
+    debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
