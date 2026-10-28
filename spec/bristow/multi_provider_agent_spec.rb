@@ -105,10 +105,10 @@ RSpec.describe "Multi-Provider Agent Support" do
 
     describe "dynamic provider override" do
       it "overrides provider at instantiation" do
-        agent = openai_agent_class.new(provider: :anthropic, model: "claude-3-haiku-20240307")
+        agent = openai_agent_class.new(provider: :anthropic, model: "claude-haiku-4-5-20251001")
 
         expect(agent.provider).to eq(:anthropic)
-        expect(agent.model).to eq("claude-3-haiku-20240307")
+        expect(agent.model).to eq("claude-haiku-4-5-20251001")
         expect(agent.client).to be_a(Bristow::Providers::Anthropic)
       end
 

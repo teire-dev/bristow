@@ -11,7 +11,7 @@ RSpec.describe Bristow::Providers::Anthropic do
 
   describe "#default_model" do
     it "returns claude-3-5-sonnet-20241022" do
-      expect(provider.default_model).to eq("claude-3-5-sonnet-20241022")
+      expect(provider.default_model).to eq("claude-sonnet-5-5")
     end
   end
 
@@ -43,7 +43,7 @@ RSpec.describe Bristow::Providers::Anthropic do
       mock_messages = instance_double("messages")
       allow(mock_client).to receive(:messages).and_return(mock_messages)
       allow(mock_messages).to receive(:create).with({
-        model: "claude-3-5-sonnet-20241022",
+        model: "claude-sonnet-5-5",
         max_tokens: 1024,
         messages: []
       }).and_return(mock_response)
